@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <h3>@ViewBag.Fecha</h3>
+    <h1>Bienvenidos al último trabajo integrador!</h1>
+    @section SideBar {
+        <p>Bienvenidos al sitio web de empleados!</p>
+    }
+   
+    <p>
+        @Html.ActionLink("Ir al listado de empleados", "Index", "Empleado")
+    </p>
+</div>
+
+

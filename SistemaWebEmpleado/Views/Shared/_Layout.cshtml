@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/stylesheet.css" rel="stylesheet" />
+</head>
+<body>
+    <section>
+        <div class="header">
+            <h2>SISTEMA DE EMPLEADOS</h2>
+        </div>
+        <div class="sidebar">
+            @if (IsSectionDefined("sidebar"))
+            {
+                @RenderSection("sidebar")
+            }
+            else
+            {
+                <p>Administración de Empleados</p>
+            }
+
+        </div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li>
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Lista de Empleados", "Index", "Empleado")
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mainContent">
+            <div>
+                @RenderBody()
+            </div>
+            <div class="piePag">
+                
+            </div>
+        </div>
+        <footer>
+           <p>Desarrollado por Mariela Valentini</p>
+        </footer>
+        
+    </section>
+</body>
+</html>
